@@ -1,0 +1,13 @@
+D:\00 SOURCE\00 Core\ZENC.AZURE\bin\Debug\netstandard2.0\ZENC.AZURE.deps.json
+D:\00 SOURCE\00 Core\ZENC.AZURE\bin\Debug\netstandard2.0\ZENC.AZURE.dll
+D:\00 SOURCE\00 Core\ZENC.AZURE\bin\Debug\netstandard2.0\ZENC.AZURE.pdb
+D:\00 SOURCE\00 Core\ZENC.AZURE\bin\Debug\netstandard2.0\ZENC.dll
+D:\00 SOURCE\00 Core\ZENC.AZURE\bin\Debug\netstandard2.0\ZENC.pdb
+D:\00 SOURCE\00 Core\ZENC.AZURE\obj\Debug\netstandard2.0\ZENC.AZURE.csproj.AssemblyReference.cache
+D:\00 SOURCE\00 Core\ZENC.AZURE\obj\Debug\netstandard2.0\ZENC.AZURE.GeneratedMSBuildEditorConfig.editorconfig
+D:\00 SOURCE\00 Core\ZENC.AZURE\obj\Debug\netstandard2.0\ZENC.AZURE.AssemblyInfoInputs.cache
+D:\00 SOURCE\00 Core\ZENC.AZURE\obj\Debug\netstandard2.0\ZENC.AZURE.AssemblyInfo.cs
+D:\00 SOURCE\00 Core\ZENC.AZURE\obj\Debug\netstandard2.0\ZENC.AZURE.csproj.CoreCompileInputs.cache
+D:\00 SOURCE\00 Core\ZENC.AZURE\obj\Debug\netstandard2.0\ZENC.AZURE.csproj.CopyComplete
+D:\00 SOURCE\00 Core\ZENC.AZURE\obj\Debug\netstandard2.0\ZENC.AZURE.dll
+D:\00 SOURCE\00 Core\ZENC.AZURE\obj\Debug\netstandard2.0\ZENC.AZURE.pdb

@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="API\Client\**" />
+    <Compile Remove="API\Common\Auth\**" />
+    <Compile Remove="API\Common\File\**" />
+    <Compile Remove="Cryptography\**" />
+    <Compile Remove="Extention\**" />
+    <Compile Remove="Util\**" />
+    <Compile Remove="WPF\**" />
+    <EmbeddedResource Remove="API\Client\**" />
+    <EmbeddedResource Remove="API\Common\Auth\**" />
+    <EmbeddedResource Remove="API\Common\File\**" />
+    <EmbeddedResource Remove="Cryptography\**" />
+    <EmbeddedResource Remove="Extention\**" />
+    <EmbeddedResource Remove="Util\**" />
+    <EmbeddedResource Remove="WPF\**" />
+    <None Remove="API\Client\**" />
+    <None Remove="API\Common\Auth\**" />
+    <None Remove="API\Common\File\**" />
+    <None Remove="Cryptography\**" />
+    <None Remove="Extention\**" />
+    <None Remove="Util\**" />
+    <None Remove="WPF\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.2.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.25.0" />
+    <PackageReference Include="NLog" Version="5.0.5" />
+    <PackageReference Include="SmartSql" Version="4.1.64" />
+    <PackageReference Include="SmartSql.AOP" Version="4.1.64" />
+    <PackageReference Include="SmartSql.DIExtension" Version="4.1.64" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.0" />
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ZENC\ZENC.csproj" />
+  </ItemGroup>
+
+</Project>

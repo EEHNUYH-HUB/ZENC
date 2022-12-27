@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\00 Core\ZENC.CORE\ZENC.CORE\ZENC.CORE.csproj" />
+    <ProjectReference Include="..\..\00 Core\ZENC\ZENC.csproj" />
+    <ProjectReference Include="..\ZENC.SAMPLE.BIZ\ZENC.SAMPLE.BIZ.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="smartPostgreMapConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="imageFolder\" />
+  </ItemGroup>
+
+</Project>

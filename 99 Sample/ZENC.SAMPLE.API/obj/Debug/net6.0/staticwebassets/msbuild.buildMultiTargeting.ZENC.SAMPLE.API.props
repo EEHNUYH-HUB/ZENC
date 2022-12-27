@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ZENC.SAMPLE.API.props" />
+</Project>

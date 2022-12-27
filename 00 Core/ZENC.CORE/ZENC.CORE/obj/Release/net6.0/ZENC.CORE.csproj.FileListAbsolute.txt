@@ -1,0 +1,12 @@
+D:\00 SOURCE\00 Core\ZENC.CORE\ZENC.CORE\bin\Release\net6.0\ZENC.CORE.deps.json
+D:\00 SOURCE\00 Core\ZENC.CORE\ZENC.CORE\bin\Release\net6.0\ZENC.CORE.dll
+D:\00 SOURCE\00 Core\ZENC.CORE\ZENC.CORE\bin\Release\net6.0\ZENC.CORE.pdb
+D:\00 SOURCE\00 Core\ZENC.CORE\ZENC.CORE\obj\Release\net6.0\ZENC.CORE.csproj.AssemblyReference.cache
+D:\00 SOURCE\00 Core\ZENC.CORE\ZENC.CORE\obj\Release\net6.0\ZENC.CORE.GeneratedMSBuildEditorConfig.editorconfig
+D:\00 SOURCE\00 Core\ZENC.CORE\ZENC.CORE\obj\Release\net6.0\ZENC.CORE.AssemblyInfoInputs.cache
+D:\00 SOURCE\00 Core\ZENC.CORE\ZENC.CORE\obj\Release\net6.0\ZENC.CORE.AssemblyInfo.cs
+D:\00 SOURCE\00 Core\ZENC.CORE\ZENC.CORE\obj\Release\net6.0\ZENC.CORE.csproj.CoreCompileInputs.cache
+D:\00 SOURCE\00 Core\ZENC.CORE\ZENC.CORE\obj\Release\net6.0\ZENC.CORE.dll
+D:\00 SOURCE\00 Core\ZENC.CORE\ZENC.CORE\obj\Release\net6.0\refint\ZENC.CORE.dll
+D:\00 SOURCE\00 Core\ZENC.CORE\ZENC.CORE\obj\Release\net6.0\ZENC.CORE.pdb
+D:\00 SOURCE\00 Core\ZENC.CORE\ZENC.CORE\obj\Release\net6.0\ref\ZENC.CORE.dll

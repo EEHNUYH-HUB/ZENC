@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SmartSqlMap Scope="SQL"  xmlns="http://SmartSql.net/schemas/SmartSqlMap.xsd">
+	<Statements>
+		<Statement Id="SELECT">
+			SELECT * FROM TBL_TEST
+		</Statement>
+		<Statement Id="INSERT">
+			INSERT INTO  TBL_TEST (COL_1,COL_2) VALUES (@COL1,@COL2)
+		</Statement>
+	</Statements>
+</SmartSqlMap>

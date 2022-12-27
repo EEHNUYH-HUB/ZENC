@@ -1,0 +1,2 @@
+D:\00 SOURCE\99 Sample\ZENC.SAMPLE.OFFICE\obj\Debug\ZENC.SAMPLE.OFFICE.csproj.AssemblyReference.cache
+D:\00 SOURCE\99 Sample\ZENC.SAMPLE.OFFICE\obj\Debug\ZENC.SAMPLE.OFFICE.csproj.CoreCompileInputs.cache
