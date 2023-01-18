@@ -12,3 +12,17 @@ D:\00 SOURCE\99 Sample\ZENC.SAMPLE.BIZ\obj\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.
 D:\00 SOURCE\99 Sample\ZENC.SAMPLE.BIZ\bin\Debug\netstandard2.0\ZENC.dll
 D:\00 SOURCE\99 Sample\ZENC.SAMPLE.BIZ\bin\Debug\netstandard2.0\ZENC.pdb
 D:\00 SOURCE\99 Sample\ZENC.SAMPLE.BIZ\obj\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.csproj.CopyComplete
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\bin\Debug\netstandard2.0\Maps\SQL.xml
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\bin\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.deps.json
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\bin\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.dll
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\bin\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.pdb
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\bin\Debug\netstandard2.0\ZENC.dll
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\bin\Debug\netstandard2.0\ZENC.pdb
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\obj\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.csproj.AssemblyReference.cache
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\obj\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.GeneratedMSBuildEditorConfig.editorconfig
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\obj\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.AssemblyInfoInputs.cache
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\obj\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.AssemblyInfo.cs
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\obj\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.csproj.CoreCompileInputs.cache
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\obj\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.csproj.CopyComplete
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\obj\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.dll
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE.BIZ\obj\Debug\netstandard2.0\ZENC.SAMPLE.BIZ.pdb

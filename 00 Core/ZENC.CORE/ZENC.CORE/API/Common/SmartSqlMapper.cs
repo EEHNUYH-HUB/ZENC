@@ -12,7 +12,7 @@ namespace ZENC.CORE.API.Common
 {
     public class SmartSqlMapper
     {
-        private readonly IDbSessionFactory SqlContext;
+        public IDbSessionFactory SqlContext { get; set; }
 
         static SmartSqlMapper instance; 
         public static SmartSqlMapper Instance { get { return instance; } }
@@ -118,6 +118,15 @@ namespace ZENC.CORE.API.Common
         #endregion
 
         #region Entitiy Execute
+        public RequestContext GetContext(string scope, string statementId, IDictionary<string, object> param)
+        {
+            SmartSqlParameter rstContext = new SmartSqlParameter();
+            rstContext.Scope = scope;
+            rstContext.StatementId = statementId;
+            rstContext.Parameters = param;
+            return rstContext.ConvertRequestContext();
+        }
+
         public IList<T> Query<T>(SmartSqlParameter paramters)
         {
             IList<T> t = null;

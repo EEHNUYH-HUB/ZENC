@@ -20,7 +20,7 @@ builder.Services.AddSwaggerGen();
 ZENCServiceSetting zencServiceSetting = new ZENCServiceSetting(builder.Services);
 
 zencServiceSetting.Init();
-string allowOrigins = zencServiceSetting.AddCors("http://localhost:8080", "http://localhost:8081");
+string allowOrigins = zencServiceSetting.AddCors("http://localhost:8080", "http://localhost:8081","http://jmfc.eehnuyh.com");
 zencServiceSetting.InitAuthenticator(new ZENC.CORE.API.Common.Auth.TokenAuthenticator());
 var configuration = builder.Configuration;
 var contentRoot = configuration.GetValue<string>(WebHostDefaults.ContentRootKey);

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XOCqcQ4o1soFsUXArJKaq24cDgA827DwQrhYg/7oMutHtEg/uAalHRlNC/auGSvRVwJvMSGoturVwAdpJUZgtw==",
+  "dgSpecHash": "G/Rw2vnbJZq2DOqggpqJt/S6C6VdspHuHjsG9qiZPXqDOLM9wNxiqFCjUAAwzOFDM97LoSXq/UeiZFVeZuZZWw==",
   "success": true,
-  "projectFilePath": "D:\\00 SOURCE\\99 Sample\\ZENC.SAMPLE.BIZ\\ZENC.SAMPLE.BIZ.csproj",
+  "projectFilePath": "D:\\00 SOURCE\\ZENC\\99 Sample\\ZENC.SAMPLE.BIZ\\ZENC.SAMPLE.BIZ.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hhlee\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\hhlee\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",

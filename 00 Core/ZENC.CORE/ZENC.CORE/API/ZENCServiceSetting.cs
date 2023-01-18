@@ -64,6 +64,7 @@ namespace ZENC.CORE.API
         public void InitSmartSql(string configPath)
         {
             this.services.AddSingleton<SmartSqlMapper>();
+            
 
             this.services.AddSmartSql((builder) =>
             {

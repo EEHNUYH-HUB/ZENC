@@ -1,11 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SmartSqlMap Scope="SQL"  xmlns="http://SmartSql.net/schemas/SmartSqlMap.xsd">
 	<Statements>
-		<Statement Id="SELECT">
-			SELECT * FROM TBL_TEST
+		<Statement Id="SELLOCATION">
+			SELECT * FROM TBL_LOCATION
 		</Statement>
-		<Statement Id="INSERT">
-			INSERT INTO  TBL_TEST (COL_1,COL_2) VALUES (@COL1,@COL2)
+		<Statement Id="SELMEMBER">
+
+
+
+SELECT 			A.*
+			,	COALESCE(B.WINCNT,0) AS WINCNT
+			,	COALESCE(B.TIECNT,0) AS TIECNT
+			,	COALESCE(B.LOSSCNT,0) AS LOSSCNT
+			,	COALESCE(C.GOAL,0) AS GOAL
+			,	COALESCE(C.ASSIST,0) AS ASSIST
+			,	COALESCE(C.SAVE,0) AS SAVE
+			,	COALESCE(B.WINCNT,0)*3 + COALESCE(B.TIECNT,0) AS TEAMSCORE
+			,	COALESCE(C.GOAL,0)*10 + COALESCE(C.ASSIST,0) *5 + COALESCE(C.SAVE,0)*2 AS MEMBERSCORE
+FROM 			TBL_MEMBER A
+INNER JOIN		(
+					SELECT			A.PK_ID
+						,			SUM(WINCNT) AS WINCNT
+						,			SUM(TIECNT) AS TIECNT
+						,			SUM(LOSSCNT) AS LOSSCNT
+					FROM 			TBL_MEMBER A
+					LEFT OUTER JOIN TBL_TEAM B ON A.PK_ID = B.FK_MEMBER_ID
+					LEFT OUTER JOIN (
+										SELECT 		B.PK_ID AS TEAMID
+											,		SUM(
+															CASE 	WHEN 	A.COL_LEFT_SCORE > A.COL_RIGHT_SCORE
+															THEN 	CASE WHEN A.FK_LEFT_TEAM_ID = B.PK_ID THEN 1 ELSE 0 END
+															ELSE 	CASE WHEN A.FK_LEFT_TEAM_ID = B.PK_ID THEN 0 ELSE 1 END
+															END
+														) AS WINCNT
+											,		SUM(CASE WHEN A.COL_LEFT_SCORE = A.COL_RIGHT_SCORE THEN 1 ELSE  0 END) AS TIECNT
+											,		SUM(
+															CASE 	WHEN 	A.COL_RIGHT_SCORE > A.COL_LEFT_SCORE
+															THEN	CASE WHEN A.FK_LEFT_TEAM_ID = B.PK_ID THEN 1 ELSE 0 END	 
+															ELSE  	CASE WHEN A.FK_LEFT_TEAM_ID = B.PK_ID THEN 0 ELSE 1 END 
+															END
+														) AS LOSSCNT
+										FROM 		TBL_PLAY A
+											,		TBL_TEAM B
+										WHERE		A.FK_LEFT_TEAM_ID =  B.PK_ID
+										OR			A.FK_RIGHT_TEAM_ID = B.PK_ID
+										GROUP BY 	B.PK_ID
+									) AS C ON B.PK_ID= C.TEAMID
+					GROUP BY A.PK_ID
+				) B ON A.PK_ID = B.PK_ID
+LEFT OUTER JOIN (
+					SELECT 		FK_MEMBER_ID
+						,		SUM(CASE WHEN COL_TYPE = 0 THEN 1 ELSE 0 END) AS GOAL
+						,		SUM(CASE WHEN COL_TYPE = 1 THEN 1 ELSE 0 END) AS ASSIST
+						,		SUM(CASE WHEN COL_TYPE = 2 THEN 1 ELSE 0 END) AS SAVE
+					FROM 		TBL_PLAY_DETAIL
+					GROUP BY	FK_MEMBER_ID
+				) C ON A.PK_ID = C.FK_MEMBER_ID
+ORDER BY A.PK_ID
+			
+		</Statement>
+		<Statement Id="CHKMEMBER">
+			SELECT COUNT(1) FROM TBL_MEMBER WHERE COL_NAME = @name AND COL_BIRTHDAY = @birthday
+		</Statement>
+		<Statement Id="INSERTMEMBER">
+			INSERT INTO TBL_MEMBER(COL_NAME,COL_PHONE,COL_BIRTHDAY) VALUES (@name, @phone,@birthday) 
+		</Statement>
+		<Statement Id="UPDATEMEMBER">
+			UPDATE TBL_MEMBER
+			SET COL_NAME = @name
+			,	COL_PHONE = @phone
+			,	COL_BIRTHDAY = @birthday
+			WHERE PK_ID = @pkid
 		</Statement>
 	</Statements>
 </SmartSqlMap>

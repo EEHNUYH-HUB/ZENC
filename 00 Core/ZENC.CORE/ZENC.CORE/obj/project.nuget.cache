@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "feuvvrxmkQh+cDnGpImWhxISypi5+VfN9uEGEmhfqizqOcI7ew84YIxMyGP6SjK0HKkvEA+U7PKMrVLt8Zh/Lw==",
+  "dgSpecHash": "pgCcK9p4oe52HTA0Fn7klcTsNzvGi1+uxp16BHkmBJkHIDhUT+NMhjLrGPbRH70q8gmXnUG5ZhCgRjY/MsG38Q==",
   "success": true,
-  "projectFilePath": "D:\\00 SOURCE\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj",
+  "projectFilePath": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hhlee\\.nuget\\packages\\aspectcore.abstractions\\1.2.0\\aspectcore.abstractions.1.2.0.nupkg.sha512",
     "C:\\Users\\hhlee\\.nuget\\packages\\aspectcore.core\\1.2.0\\aspectcore.core.1.2.0.nupkg.sha512",

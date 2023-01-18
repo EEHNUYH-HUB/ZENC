@@ -1,0 +1,10 @@
+D:\00 SOURCE\ZENC\00 Core\ZENC\bin\Release\netstandard2.0\ZENC.deps.json
+D:\00 SOURCE\ZENC\00 Core\ZENC\bin\Release\netstandard2.0\ZENC.dll
+D:\00 SOURCE\ZENC\00 Core\ZENC\bin\Release\netstandard2.0\ZENC.pdb
+D:\00 SOURCE\ZENC\00 Core\ZENC\obj\Release\netstandard2.0\ZENC.csproj.AssemblyReference.cache
+D:\00 SOURCE\ZENC\00 Core\ZENC\obj\Release\netstandard2.0\ZENC.GeneratedMSBuildEditorConfig.editorconfig
+D:\00 SOURCE\ZENC\00 Core\ZENC\obj\Release\netstandard2.0\ZENC.AssemblyInfoInputs.cache
+D:\00 SOURCE\ZENC\00 Core\ZENC\obj\Release\netstandard2.0\ZENC.AssemblyInfo.cs
+D:\00 SOURCE\ZENC\00 Core\ZENC\obj\Release\netstandard2.0\ZENC.csproj.CoreCompileInputs.cache
+D:\00 SOURCE\ZENC\00 Core\ZENC\obj\Release\netstandard2.0\ZENC.dll
+D:\00 SOURCE\ZENC\00 Core\ZENC\obj\Release\netstandard2.0\ZENC.pdb

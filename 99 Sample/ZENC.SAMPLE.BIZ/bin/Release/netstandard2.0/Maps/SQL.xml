@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SmartSqlMap Scope="SQL"  xmlns="http://SmartSql.net/schemas/SmartSqlMap.xsd">
+	<Statements>
+		<Statement Id="SELLOCATION">
+			SELECT * FROM TBL_LOCATION
+		</Statement>		
+	</Statements>
+</SmartSqlMap>

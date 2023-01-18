@@ -1775,10 +1775,7 @@
         },
         "runtime": {
           "bin/placeholder/ZENC.CORE.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "ZENC.SAMPLE.BIZ/1.0.0": {
         "type": "project",
@@ -5403,11 +5400,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\00 SOURCE\\99 Sample\\ZENC.SAMPLE.API\\ZENC.SAMPLE.API.csproj",
+      "projectUniqueName": "D:\\00 SOURCE\\ZENC\\99 Sample\\ZENC.SAMPLE.API\\ZENC.SAMPLE.API.csproj",
       "projectName": "ZENC.SAMPLE.API",
-      "projectPath": "D:\\00 SOURCE\\99 Sample\\ZENC.SAMPLE.API\\ZENC.SAMPLE.API.csproj",
+      "projectPath": "D:\\00 SOURCE\\ZENC\\99 Sample\\ZENC.SAMPLE.API\\ZENC.SAMPLE.API.csproj",
       "packagesPath": "C:\\Users\\hhlee\\.nuget\\packages\\",
-      "outputPath": "D:\\00 SOURCE\\99 Sample\\ZENC.SAMPLE.API\\obj\\",
+      "outputPath": "D:\\00 SOURCE\\ZENC\\99 Sample\\ZENC.SAMPLE.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5428,14 +5425,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\00 SOURCE\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj": {
-              "projectPath": "D:\\00 SOURCE\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj"
+            "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj": {
+              "projectPath": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj"
             },
-            "D:\\00 SOURCE\\00 Core\\ZENC\\ZENC.csproj": {
-              "projectPath": "D:\\00 SOURCE\\00 Core\\ZENC\\ZENC.csproj"
+            "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC\\ZENC.csproj": {
+              "projectPath": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC\\ZENC.csproj"
             },
-            "D:\\00 SOURCE\\99 Sample\\ZENC.SAMPLE.BIZ\\ZENC.SAMPLE.BIZ.csproj": {
-              "projectPath": "D:\\00 SOURCE\\99 Sample\\ZENC.SAMPLE.BIZ\\ZENC.SAMPLE.BIZ.csproj"
+            "D:\\00 SOURCE\\ZENC\\99 Sample\\ZENC.SAMPLE.BIZ\\ZENC.SAMPLE.BIZ.csproj": {
+              "projectPath": "D:\\00 SOURCE\\ZENC\\99 Sample\\ZENC.SAMPLE.BIZ\\ZENC.SAMPLE.BIZ.csproj"
             }
           }
         }

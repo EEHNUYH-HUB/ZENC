@@ -2295,10 +2295,7 @@
         },
         "runtime": {
           "bin/placeholder/ZENC.CORE.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -6935,11 +6932,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\00 SOURCE\\99 Sample\\ZENC.SAMPLE\\ZENC.SAMPLE.csproj",
+      "projectUniqueName": "D:\\00 SOURCE\\ZENC\\99 Sample\\ZENC.SAMPLE\\ZENC.SAMPLE.csproj",
       "projectName": "ZENC.SAMPLE",
-      "projectPath": "D:\\00 SOURCE\\99 Sample\\ZENC.SAMPLE\\ZENC.SAMPLE.csproj",
+      "projectPath": "D:\\00 SOURCE\\ZENC\\99 Sample\\ZENC.SAMPLE\\ZENC.SAMPLE.csproj",
       "packagesPath": "C:\\Users\\hhlee\\.nuget\\packages\\",
-      "outputPath": "D:\\00 SOURCE\\99 Sample\\ZENC.SAMPLE\\obj\\",
+      "outputPath": "D:\\00 SOURCE\\ZENC\\99 Sample\\ZENC.SAMPLE\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6960,11 +6957,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\00 SOURCE\\00 Core\\ZENC.AZURE\\ZENC.AZURE.csproj": {
-              "projectPath": "D:\\00 SOURCE\\00 Core\\ZENC.AZURE\\ZENC.AZURE.csproj"
+            "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC.AZURE\\ZENC.AZURE.csproj": {
+              "projectPath": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC.AZURE\\ZENC.AZURE.csproj"
             },
-            "D:\\00 SOURCE\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj": {
-              "projectPath": "D:\\00 SOURCE\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj"
+            "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj": {
+              "projectPath": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj"
             }
           }
         }

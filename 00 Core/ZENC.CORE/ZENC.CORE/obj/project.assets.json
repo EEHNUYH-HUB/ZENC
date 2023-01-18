@@ -5061,11 +5061,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\00 SOURCE\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj",
+      "projectUniqueName": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj",
       "projectName": "ZENC.CORE",
-      "projectPath": "D:\\00 SOURCE\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj",
+      "projectPath": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC.CORE\\ZENC.CORE\\ZENC.CORE.csproj",
       "packagesPath": "C:\\Users\\hhlee\\.nuget\\packages\\",
-      "outputPath": "D:\\00 SOURCE\\00 Core\\ZENC.CORE\\ZENC.CORE\\obj\\",
+      "outputPath": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC.CORE\\ZENC.CORE\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5086,8 +5086,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\00 SOURCE\\00 Core\\ZENC\\ZENC.csproj": {
-              "projectPath": "D:\\00 SOURCE\\00 Core\\ZENC\\ZENC.csproj"
+            "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC\\ZENC.csproj": {
+              "projectPath": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC\\ZENC.csproj"
             }
           }
         }
@@ -5155,9 +5155,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

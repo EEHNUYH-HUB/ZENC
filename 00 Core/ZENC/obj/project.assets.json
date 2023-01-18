@@ -1212,11 +1212,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\00 SOURCE\\00 Core\\ZENC\\ZENC.csproj",
+      "projectUniqueName": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC\\ZENC.csproj",
       "projectName": "ZENC",
-      "projectPath": "D:\\00 SOURCE\\00 Core\\ZENC\\ZENC.csproj",
+      "projectPath": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC\\ZENC.csproj",
       "packagesPath": "C:\\Users\\hhlee\\.nuget\\packages\\",
-      "outputPath": "D:\\00 SOURCE\\00 Core\\ZENC\\obj\\",
+      "outputPath": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

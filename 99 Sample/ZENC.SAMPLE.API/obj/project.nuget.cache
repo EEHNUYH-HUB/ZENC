@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f/F2cMat57gR6UqLfWEfaYYiRgBgQTkJiZl3JVb8qvs6NWgXaTG20ubvZtc1dDUyy+JffuM985b3qkokygFBig==",
+  "dgSpecHash": "uo30j2zbqyeaZ5uQ8OJeUrJ8kAFNx0VfUvDo2irzfo4wwQwUssPwoMVhHm9fCiWqaKApvm9Kjf7jw9fG0nQdQg==",
   "success": true,
-  "projectFilePath": "D:\\00 SOURCE\\99 Sample\\ZENC.SAMPLE.API\\ZENC.SAMPLE.API.csproj",
+  "projectFilePath": "D:\\00 SOURCE\\ZENC\\99 Sample\\ZENC.SAMPLE.API\\ZENC.SAMPLE.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hhlee\\.nuget\\packages\\aspectcore.abstractions\\1.2.0\\aspectcore.abstractions.1.2.0.nupkg.sha512",
     "C:\\Users\\hhlee\\.nuget\\packages\\aspectcore.core\\1.2.0\\aspectcore.core.1.2.0.nupkg.sha512",

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\00 SOURCE\99 Sample\ZENC.SAMPLE\obj\Debug\net6.0-windows\
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE\obj\Debug\net6.0-windows\
 ZENC.SAMPLE
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\00 SOURCE\99 Sample\ZENC.SAMPLE\App.xaml
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE\App.xaml
 11407045341
 
 51401557491
-3511598853230
+3511063072075
 MainWindow.xaml;
 
-True
+False
 

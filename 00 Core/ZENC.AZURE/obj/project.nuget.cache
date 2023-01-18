@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bmLMbN0yP5wGn2NKsjuw+cHF0D/21BIqlfZP1QqTQMwE5p/GP8+bqMEWLdDafDg7r+Nan9u68wnzuspU30qhMw==",
+  "dgSpecHash": "HeOhG/88B7GpeBT3rOLXe3xPKIW2kj9LCxS4/i/+EE6LJl6P4htMqyXPeDSthTGBsRNjWb53zsyktQi09ajCQg==",
   "success": true,
-  "projectFilePath": "D:\\00 SOURCE\\00 Core\\ZENC.AZURE\\ZENC.AZURE.csproj",
+  "projectFilePath": "D:\\00 SOURCE\\ZENC\\00 Core\\ZENC.AZURE\\ZENC.AZURE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hhlee\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\hhlee\\.nuget\\packages\\azure.storage.blobs\\12.14.1\\azure.storage.blobs.12.14.1.nupkg.sha512",
