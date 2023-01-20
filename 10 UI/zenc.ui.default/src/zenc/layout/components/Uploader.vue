@@ -41,11 +41,12 @@
 </template>
   
 <script setup>
-import { ref } from 'vue'
-import { ArchiveOutline as ArchiveIcon,Close
- } from '@vicons/ionicons5'
+import { ref ,defineEmits} from 'vue'
+import { ArchiveOutline as ArchiveIcon,Close } from '@vicons/ionicons5'
 import {  useMessage,useDialog   } from 'naive-ui'
-import FileUploader from '@/zenc/js/FileUploader'
+import FileHandler from '@/zenc/js/FileHandler'
+import {DownloadLink,ImageLink} from '@/zenc/js/Common'
+
 const oFileHandler = ref();
 const IsShow = ref(false);
 const FileList = ref(new Array);
@@ -55,7 +56,7 @@ const Props = defineProps({
     Text: { type: String, default: 'Upload' },
     Placement: { type: String, default: 'right' }
 })
-
+const Emits = defineEmits(['completed','error'])
 const OnShow = () => {
     IsShow.value = !IsShow.value;
     if (FileList.value) {
@@ -80,7 +81,7 @@ const OnCloseFile = (item)=>{
     }
 }
 const OnFileDrop = () => {
-    alert("D")
+    alert("준비중")
 }
 const OnDragEnter = (e) => {
     if (e.preventDefault) {
@@ -141,9 +142,13 @@ const OnRunUpload = (item) => {
 
     item.Status = "info";
     item.Msg = '';
-    var uploader = new FileUploader();
-    uploader.CompletedEvent = () => {
+    var uploader = new FileHandler();
+    uploader.CompletedEvent = (staticID) => {
         item.Status = "success";
+        item.StaticID = staticID;
+        item.Url = DownloadLink(staticID);
+        item.ImageUrl =ImageLink(staticID);
+        Emits('completed',item);
     }
     uploader.ProgressEvent = (pecent) => {
         item.Percent = pecent;
@@ -154,6 +159,7 @@ const OnRunUpload = (item) => {
         
         item.Status = "error";
         item.Msg = msg;
+        Emits('error',item);
     }
 
     uploader.Upload(item.File, null);

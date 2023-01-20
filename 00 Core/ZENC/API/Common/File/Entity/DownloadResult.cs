@@ -15,7 +15,7 @@ namespace ZENC.CORE.API.Common.File.Entity
 
         public void Dispose()
         {
-            if (DownloadStream.EzNotNull())
+            if (DownloadStream.ExNotNull())
             {
                 DownloadStream.Dispose();
             }

@@ -32,6 +32,7 @@ using Microsoft.WindowsAzure.Storage.Blob;
 using System.ComponentModel;
 using ZENC.AZURE.Storage.Blobs;
 using System.Windows.Interop;
+using ZENC.AZURE.Resources;
 
 namespace ZENC.SAMPLE
 {
@@ -131,6 +132,13 @@ namespace ZENC.SAMPLE
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Class1 a = new Class1();
+            a.Test();
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
         {
 
         }

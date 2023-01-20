@@ -25,8 +25,8 @@ zencServiceSetting.InitAuthenticator(new ZENC.CORE.API.Common.Auth.TokenAuthenti
 var configuration = builder.Configuration;
 var contentRoot = configuration.GetValue<string>(WebHostDefaults.ContentRootKey);
 
-zencServiceSetting.InitSmartSql(contentRoot.EzCombine("smartPostgreMapConfig.xml"));
-zencServiceSetting.InitNLogConfig(contentRoot.EzCombine("nlog.config"));
+zencServiceSetting.InitSmartSql(contentRoot.ExCombine("smartPostgreMapConfig.xml"));
+zencServiceSetting.InitNLogConfig(contentRoot.ExCombine("nlog.config"));
 
 string filePath   = Path.Combine(contentRoot, "imagefolder");
 

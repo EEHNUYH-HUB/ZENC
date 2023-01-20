@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory,createWebHashHistory } from "vue-router";
 import { GetRoutes } from '@/zenc/router/menus'
 
 const routes = GetRoutes()
 const router = createRouter({
-  history : createWebHistory(), //해시 히스토리 모드(SPA 방식이여서 페이지가 바뀔대 마다 서버에 페이지에 대한 정보를 다시 요청하지 않음)
+  history : createWebHashHistory(), //해시 히스토리 모드(SPA 방식이여서 페이지가 바뀔대 마다 서버에 페이지에 대한 정보를 다시 요청하지 않음)
   routes,
   linkActiveClass: "active",
 });

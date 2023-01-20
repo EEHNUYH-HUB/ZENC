@@ -12,6 +12,7 @@ namespace ZENC.CORE.API.Common.File.Entity
     }
     public class UploadResult
     {
+        public string FileID { get; set; }
         public UploadResultType ResultType { get; set; }
         public string ErrorMsg { get; set; }
 

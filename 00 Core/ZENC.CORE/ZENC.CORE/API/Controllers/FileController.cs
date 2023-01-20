@@ -22,33 +22,33 @@ namespace ZENC.CORE.API.Controllers
         }
         [HttpGet]
         [AllowAnonymous]
-        public async Task Download(string id ,string num)
+        public async Task Download(string staticid)
         {
-            if (fileHandler.EzNotNull())
+            if (fileHandler.ExNotNull())
             {
-                await Download(this.fileHandler.Read(id,num));
+                await Download(this.fileHandler.Read(staticid));
             }
         }
 
 
         [HttpGet]
         [AllowAnonymous]
-        public async Task Image(string id,string num)
+        public async Task Image(string staticid)
         {
             try
             {
 
-                using (var downloadResult = this.fileHandler.Read(id,num))
+                using (var downloadResult = this.fileHandler.Read(staticid))
                 {
                     HttpContext.Response.ContentType = "image/png";
                     byte[] buffer = new byte[downloadResult.DownloadStream.Length];
 
                     downloadResult.DownloadStream.Read(buffer, 0, buffer.Length);
-                    
-                    
+
+
                     await HttpContext.Response.Body.WriteAsync(buffer);
                 }
-                    
+
 
             }
             catch (Exception ex)
@@ -60,13 +60,13 @@ namespace ZENC.CORE.API.Controllers
 
         private async Task Download(DownloadResult result)
         {
-            if (result.EzNotNull())
+            if (result.ExNotNull())
             {
                 using (result)
                 {
                     HttpContext.Response.ContentType = "application/octet-stream";
                     HttpContext.Response.ContentLength = result.DownloadStream.Length;
-                    
+
                     HttpContext.Response.Headers.Add("Content-Disposition", "attachment; Filename=" + System.Net.WebUtility.UrlEncode(result.FileName));
 
 
@@ -92,8 +92,8 @@ namespace ZENC.CORE.API.Controllers
         }
 
         [HttpPost]
-        public async Task <UploadResult> Upload(FileParameter param)
-        {            
+        public async Task<UploadResult> Upload(FileParameter param)
+        {
             return this.fileHandler.Write(param);
         }
 

@@ -35,8 +35,8 @@ namespace ZENC.CORE.Util
             if (dinfo.Exists)
                 return false;
 
-            string ex = path.EzFileExtension();
-            return ex.EzNotNullOrEmpty();
+            string ex = path.ExFileExtension();
+            return ex.ExNotNullOrEmpty();
         }
 
         public static bool IsDirectory(string path)
@@ -84,7 +84,7 @@ namespace ZENC.CORE.Util
                 if (System.IO.File.Exists(filePath))
                 {
                     // 확장자도 감춰줍니다. (원본이 어떤 파일이었는지 추론할 수 없도록..)
-                    outputFileName = Path.Combine(filePath.EzDirectoryName(), System.Guid.NewGuid().ToString());// +Path.GetExtension(filePath);
+                    outputFileName = Path.Combine(filePath.ExDirectoryName(), System.Guid.NewGuid().ToString());// +Path.GetExtension(filePath);
 
                     System.IO.File.Move(filePath, outputFileName);
                     isMove = true;
@@ -147,7 +147,7 @@ namespace ZENC.CORE.Util
 
                 if (!dir.Exists)
                 {
-                    if (dir.Parent.EzNotNull())
+                    if (dir.Parent.ExNotNull())
                     {
                         CreateDirectory(dir.Parent.FullName);
                         Directory.CreateDirectory(directoryFullPath);

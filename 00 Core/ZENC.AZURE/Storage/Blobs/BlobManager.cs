@@ -21,8 +21,8 @@ namespace ZENC.AZURE.Storage.Blobs
         {
             BlobContainerClient containerClient = ServiceClient.GetBlobContainerClient(containerName);
 
-            string fileName = uploadPath.EzFileName();
-            fileName = folderName.EzCombine(fileName);
+            string fileName = uploadPath.ExFileName();
+            fileName = folderName.ExCombine(fileName);
             BlobClient blobClient = containerClient.GetBlobClient(fileName);
 
             using (FileStream uploadFileStream = File.OpenRead(uploadPath))
@@ -39,7 +39,7 @@ namespace ZENC.AZURE.Storage.Blobs
             Pageable<BlobContainerItem> lst = ServiceClient.GetBlobContainers();
             foreach (var item in lst)
             {
-                if (item.EzNotNull() && (item.IsDeleted.EzIsNull() || !(bool)item.IsDeleted))
+                if (item.ExNotNull() && (item.IsDeleted.ExIsNull() || !(bool)item.IsDeleted))
                     rtn.Add(item.Name);
             }
 
@@ -53,7 +53,7 @@ namespace ZENC.AZURE.Storage.Blobs
             Pageable<BlobItem> lst = containerClient.GetBlobs();
             foreach (var item in lst)
             {
-                if (item.EzNotNull()  && !item.Deleted)
+                if (item.ExNotNull()  && !item.Deleted)
                     rtn.Add(item.Name);
             }
             return rtn;

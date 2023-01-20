@@ -93,7 +93,7 @@ namespace ZENC.CORE.API.Common.Auth
         public bool IsValidate(string token)
         {
             var infos = GetInfo(token);
-            return infos.EzNotNull() && infos.Count > 0;
+            return infos.ExNotNull() && infos.Count > 0;
         }
     }
 }

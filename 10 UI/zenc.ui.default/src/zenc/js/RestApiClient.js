@@ -1,191 +1,5 @@
 import axios from "axios";
-
-// function setInterceptors(instance) {
-//     instance.interceptors.request.use(
-//       function(config) {
-//         var apikey = sessionStorage.getItem("apikey");
-//         config.headers.Authorization = apikey ? apikey : '';
-
-
-//         if(APIClient && APIClient.LodingBar){
-//           APIClient.LodingBar.start();
-//         }
-//         return config;
-//       },
-//       ErrorMethod,
-//     );
-
-//     // Add a response interceptor
-//     instance.interceptors.response.use(
-//       function(response) {
-//         if(APIClient && APIClient.LodingBar){
-//           APIClient.LodingBar.finish();
-//         }
-//         APIClient.Message.success('성공하였습니다.')
-//         APIClient.Notification.success({content:"성공하였습니다.",
-//         meta:JSON.stringify(response.data),duration: 2500,keepAliveOnHover: true})
-
-//         return response;
-//       },
-//       ErrorMethod,
-//     );
-
-//     return instance;
-//   }
-//   function ErrorMethod(error){
-
-//     if(APIClient){
-//       if(APIClient.LodingBar)
-//         APIClient.LodingBar.error();
-//       if(APIClient.Message)
-//       {
-//         var msg = '';
-//         if(error.response.data.message)
-//         {
-//           msg =error.response.data.message;
-//         }
-//         else{
-//           msg =error.response.data.title;
-//         }
-
-//         APIClient.Message.error('['+error.response.status+'] '+ msg)
-//       }
-//     }
-//     if (error && error.response && error.response.status == 401){
-
-//         APIClient.Notification.error({content:"인증실패",
-//         meta:`인증 정보가 없습니다. Certification 페이지 에서 Generate 하십시오`,duration: 2500,keepAliveOnHover: true})
-//         //alert(error)
-//         //store.dispatch('logout');
-//     }
-//     return Promise.reject(error);
-
-//   }
-
-
-// function createInstance(){
-//   const instance = axios.create({
-//     baseURL: process.env.VUE_APP_API_URL
-//   });
-
-//   return setInterceptors(instance);
-// }
-
-// const axiosService = createInstance();
-
-// const APIClient =  new Object;
-// APIClient.LodingBar = null;
-// APIClient.Message = null;
-// APIClient.Notification = null;
-
-// APIClient.Store = null;
-
-// APIClient.GenerateKey = async function(parameter){
-
-//   const  rtn = await axiosService.post('/api/Auth/GenerateKey', parameter);
-//   if(rtn.data){
-//     var key = rtn.data;
-//     var userInfo =await this.CertificationInfo(key);
-
-//     if(userInfo){
-//       sessionStorage.setItem("apikey", key); 
-
-//       this.Store.commit('setUserInfo',userInfo); 
-//     }
-//   }
-
-//   return rtn.data;
-// }
-// APIClient.CertificationInfo = async function(token){
-
-//   const  rtn = await axiosService.get('/api/Auth/CertificationInfo?key='+token);
-//   return rtn.data;
-// }
-
-
-
-// APIClient.Run = async function(assemblyName,className,methodName,parameter){
-//   const param ={
-//     assemblyName: assemblyName,
-//     className: className,
-//     methodName: methodName,
-//     parameter: parameter
-//   }
-
-
-//   const rtn = await axiosService.post('/api/SmartSql/LoadAssembly', param);
-
-
-//   return rtn.data;
-// }
-
-// APIClient.ExecDataSet=async function(scope, statementId, parameter){
-//   const param = {
-//     scope: scope,
-//     statementId : statementId,
-//     parameters: parameter
-//   }
-
-
-//   const  rtn = await  axiosService.post('/api/SmartSql/ExecuteDataSet',param);
-
-
-//   return rtn.data;
-// }
-
-
-// APIClient.ExecDataTable= async function(scope, statementId, parameter){
-//   const param = {
-//     scope: scope,
-//     statementId : statementId,
-//     parameters: parameter
-//   }
-
-//   const  rtn = await  axiosService.post('/api/SmartSql/ExecuteDataTable', param);
-
-//   return rtn.data;
-// }
-
-// APIClient.ExecScalar=async function(scope, statementId, parameter){
-//   const param = {
-//     scope: scope,
-//     statementId : statementId,
-//     parameters: parameter
-//   }
-
-//   const  rtn = await axiosService.post('/api/SmartSql/ExecuteScalar', param);
-
-
-//   return rtn.data;
-// }
-
-// APIClient.ExecNonQuery =async function(scope, statementId, parameter){
-//   const param = {
-//     scope: scope,
-//     statementId : statementId,
-//     parameters: parameter
-//   }
-
-
-//   const rtn = await axiosService.post('/api/SmartSql/ExecuteNonQuery', param);
-
-
-//   return rtn.data;
-// }
-
-
-// APIClient.FileUpload =async function(parameter){
-
-//   const rtn = await axiosService.post('/api/File/Upload', parameter);
-
-//   return rtn.data;
-// }
-
-
-
-// export default APIClient;
-
-
+import {ConvertKeyValueObjectToObject} from '@/zenc/js/Common'
 
 export default class APIClient {
   constructor() {
@@ -207,7 +21,7 @@ export default class APIClient {
     instance.interceptors.request.use(
       function (config) {
         var apikey = sessionStorage.getItem("apikey");
-        config.headers.Authorization = apikey ? apikey : '';
+        config.headers.Authorization = apikey ? apikey : 'eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lSWRlbnRpZmllciI6IjhiMjQ1MDZjLWYxZjMtNGQxYS1hZGRkLTJmZjRkN2IyNTY3MCIsIlVzZXJOYW1lIjoiSk1GQyIsIlVzZXJJRCI6IkpNRkMiLCJFbWFpbCI6ImptZmNAbmF2ZXIuY29tIiwibmJmIjoxNjczMzQxMTQ1LCJleHAiOjE2NzM0Mjc1NDUsImlzcyI6Imh0dHBzOi8vY28ua3IiLCJhdWQiOiJodHRwczovL2NvLmtyIn0.rB1ZRcayQ9HxoDuXndxYUeJsm6hcOizwo4UVrm-TUag';
 
 
         if (_self.LodingBar) {
@@ -223,8 +37,8 @@ export default class APIClient {
       function (response) {
         if (_self.LodingBar)
           _self.LodingBar.finish();
-        if (_self.Message)
-          _self.Message.success('성공하였습니다.')
+        // if (_self.Message)
+        //   _self.Message.success('성공하였습니다.')
         if (_self.Notification)
           _self.Notification.success({
             content: "성공하였습니다.",
@@ -240,10 +54,10 @@ export default class APIClient {
   }
   _errorMethod(error) {
 
-    if (this.LodingBar)
+    if (this && this.LodingBar)
       this.LodingBar.error();
 
-    if (this.Message) {
+    if (this && this.Message) {
       var msg = '';
       if (error.response.data.message) {
         msg = error.response.data.message;
@@ -257,7 +71,7 @@ export default class APIClient {
 
     if (error && error.response && error.response.status == 401) {
 
-      if (this.Notification) {
+      if (this && this.Notification) {
         this.Notification.error({
           content: "인증실패",
           meta: `인증 정보가 없습니다. Certification 페이지 에서 Generate 하십시오`, duration: 2500, keepAliveOnHover: true
@@ -274,15 +88,13 @@ export default class APIClient {
 
   async GenerateKey(parameter) {
 
-    const rtn = await this.axiosService.post('/api/Auth/GenerateKey', parameter);
+    const rtn = await this.axiosService.post('/api/Auth/GenerateKey', ConvertKeyValueObjectToObject(parameter));
     if (rtn.data) {
       var key = rtn.data;
       var userInfo = await this.CertificationInfo(key);
 
       if (userInfo) {
         sessionStorage.setItem("apikey", key);
-
-        this.Store.commit('setUserInfo', userInfo);
       }
     }
 
@@ -291,7 +103,11 @@ export default class APIClient {
   async CertificationInfo(token) {
 
     const rtn = await this.axiosService.get('/api/Auth/CertificationInfo?key=' + token);
-    return rtn.data;
+    var userInfo = rtn.data;
+    if (userInfo) {
+      this.Store.commit('setUserInfo', userInfo);
+    }
+    return userInfo;
   }
 
 
@@ -301,7 +117,7 @@ export default class APIClient {
       assemblyName: assemblyName,
       className: className,
       methodName: methodName,
-      parameter: parameter
+      parameter: ConvertKeyValueObjectToObject(parameter)
     }
 
 
@@ -315,7 +131,7 @@ export default class APIClient {
     const param = {
       scope: scope,
       statementId: statementId,
-      parameters: parameter
+      parameters: ConvertKeyValueObjectToObject(parameter)
     }
 
 
@@ -330,7 +146,7 @@ export default class APIClient {
     const param = {
       scope: scope,
       statementId: statementId,
-      parameters: parameter
+      parameters: ConvertKeyValueObjectToObject(parameter)
     }
 
     const rtn = await this.axiosService.post('/api/SmartSql/ExecuteDataTable', param);
@@ -342,7 +158,7 @@ export default class APIClient {
     const param = {
       scope: scope,
       statementId: statementId,
-      parameters: parameter
+      parameters: ConvertKeyValueObjectToObject(parameter)
     }
 
     const rtn = await this.axiosService.post('/api/SmartSql/ExecuteScalar', param);
@@ -355,7 +171,7 @@ export default class APIClient {
     const param = {
       scope: scope,
       statementId: statementId,
-      parameters: parameter
+      parameters: ConvertKeyValueObjectToObject(parameter)
     }
 
 
@@ -372,6 +188,5 @@ export default class APIClient {
 
     return rtn.data;
   }
-
 
 }

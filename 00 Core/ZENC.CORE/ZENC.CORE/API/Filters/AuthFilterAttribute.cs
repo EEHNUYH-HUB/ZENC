@@ -25,7 +25,7 @@ namespace ZENC.CORE.API.Filters
 
             var key = context.HttpContext.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
             
-            if (key.EzIsNull() || AuthFactory.SingInstance.EzIsNull() || !AuthFactory.SingInstance.IsValidate(key))
+            if (key.ExIsNull() || AuthFactory.SingInstance.ExIsNull() || !AuthFactory.SingInstance.IsValidate(key))
             {
                 var payload = new APIErrorDetails()
                 {

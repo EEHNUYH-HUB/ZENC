@@ -7,8 +7,9 @@ function ConvertToMenuItem(currentDept,allowDept,parent,menuJson,pagePath,findAc
     obj.key = menuJson.id;
     obj.desc= menuJson.desc;
     var strPath = parent+menuJson.path;
-    
-    if(pagePath.indexOf(strPath) > -1){
+    var iof = pagePath.indexOf(strPath);
+    if(iof > -1){
+        //console.log(iof,strPath,pagePath,menuJson.id)
         findActiveIdHandler(menuJson.id);
     }
     if(menuJson.children && menuJson.children.length > 0){
@@ -103,22 +104,17 @@ export function GetMenuObjRef(startIndex,allowDept,route) {
 
         if(targetList){
             for(var i in targetList){    
-                rtn.Menus.push(ConvertToMenuItem(1,allowDept,beforePath,targetList[i],pagePath,(id)=>{rtn.ActiveKey = id}));
+                rtn.Menus.push(ConvertToMenuItem(1,allowDept,beforePath,targetList[i],pagePath,(id)=>{
+                    rtn.ActiveKey = id
+                }));
             }
 
-            //rtn.ActiveKey = FindActiveKey(pagePath.Menus);
-        
         }
     }
 
     return ref(rtn);
 }
 
-// function FindActiveKey(path,menus){
-//     for(var i in menus){
-//         if()
-//     }
-// }
 export function GetRoutes () {
     
     var result =  ConvertToRoutes(menuJsonList,true,"");
@@ -166,7 +162,6 @@ function ConvertToRoutes(lst,isFirst,beforePath){
 
     return rtn;
 }
-
 
 const menuJsonList =
 [
@@ -263,24 +258,8 @@ const menuJsonList =
                 id:"1-4"
                 ,name:"File API 호출 "
                 ,path:"fileapi"
-                ,desc: "파일 업로드 방법"         
-                ,children:[
-                    {
-                        id:"1-4-1"
-                        ,name:"Upload"
-                        ,path:"upmethod"
-                        ,desc: "파일 업로드 방법"         
-                        ,component : () => import("@/views/F0001.vue")                 
-                    }       
-                    ,  {
-                        id:"1-4-2"
-                        ,name:"Download"
-                        ,path:"dwmethod"
-                        ,desc: "파일 다운로드 방법"         
-                        ,component : () => import("@/views/T0001.vue")                 
-                    }    
-                ]                
-                           
+                ,desc: "파일 업로드 다움로드 방법"     
+                ,component : () => import("@/views/F0001.vue")                 
             }
         ]
     }

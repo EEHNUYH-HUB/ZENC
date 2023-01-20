@@ -4,47 +4,42 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.NetworkInformation;
 using ZENC.CORE;
+using ZENC.CORE.API.Common.File;
 using ZENC.CORE.API.Common.File.Entity;
 using ZENC.CORE.API.Parameters;
 
 
 namespace ZENC.SAMPLE.BIZ
 {
-    public class FileHandler : ZENC.CORE.API.Common.File.IFileHandler
+    public class FileHandler : IFileHandler
     {
 
         public FileHandler(string path)
         {
-            RootFolder = path.EzCreateDirectory();
+            RootFolder = path.ExCreateDirectory();
         }
         public string RootFolder { get; set; }
-        public const long BUFFERSIZE =  2048000 ;
+        public const long BUFFERSIZE = 2048000;
         public long BufferSize { get { return BUFFERSIZE; } }
 
-       
 
-        public DownloadResult Read(string strID, string number)
+
+        public DownloadResult Read(string staticID)
         {
-            string folderPath = RootFolder.EzCombine(strID);
-            if (folderPath.EzIsExists())
+            string folderPath = RootFolder.ExCombine(staticID);
+            if (folderPath.ExIsExists())
             {
-                List<DirectoryInfo> dirs = folderPath.EzDirectoryList();
+                DirectoryInfo dir = new DirectoryInfo(folderPath);
 
-                if (dirs.EzNotNull())
+                if (dir.Exists)
                 {
-                    foreach (var dir in dirs)
+                    List<FileInfo> files = dir.FullName.ExFileList();
+                    if (files.ExNotNull() && files.Count > 0)
                     {
-                        if (dir.Name.EzToLower() == number)
-                        {
-                            List<FileInfo> files = dir.FullName.EzFileList();
-                            if (files.EzNotNull() && files.Count > 0)
-                            {
-                                DownloadResult result = new DownloadResult();
-                                result.DownloadStream = new FileStream(files[0].FullName, FileMode.Open, FileAccess.Read);
-                                result.FileName = files[0].Name;
-                                return result;
-                            }
-                        }
+                        DownloadResult result = new DownloadResult();
+                        result.DownloadStream = new FileStream(files[0].FullName, FileMode.Open, FileAccess.Read);
+                        result.FileName = files[0].Name;
+                        return result;
                     }
                 }
             }
@@ -52,25 +47,26 @@ namespace ZENC.SAMPLE.BIZ
             return null;
         }
 
-        
+
         public UploadResult Write(FileParameter param)
         {
             try
             {
-                if (param.EzNotNull())
+
+                if (param.ExNotNull())
                 {
                     UploadResult result = new UploadResult();
 
                     result.ResultType = UploadResultType.PROGRESS;
-                    if (param.EzNotNull())
+                    if (param.ExNotNull())
                     {
-                        string name = param.FileName.EzToLower();
-                        long totalSize = param.FileSize.EzLong();
-                        byte[] buffer = param.Base64String.EzBase64Byte();
-                        if (buffer.EzNotNull())
+                        string name = param.FileName.ExToLower();
+                        long totalSize = param.FileSize.ExLong();
+                        byte[] buffer = param.Base64String.ExBase64Byte();
+                        if (buffer.ExNotNull())
                         {
-                            string folder = RootFolder.EzCreateDirectory();
-                            using (FileStream fs = new FileStream(folder.EzCombine(name), FileMode.Append, FileAccess.Write))
+                            string folder = RootFolder.ExCombine(param.StaticID).ExCreateDirectory();
+                            using (FileStream fs = new FileStream(folder.ExCombine(name), FileMode.Append, FileAccess.Write))
                             {
                                 long currentSize = fs.Length + buffer.Length;
                                 fs.Write(buffer, 0, buffer.Length);

@@ -129,7 +129,7 @@ namespace ZENC.CORE.Cryptography
 
         public void DecryptFile(string inputPath, string pwd = CrypEnvironment.DEFAULTPASSWORD)
         {
-            string outputPath = inputPath.EzDirectoryName().EzCombine(Guid.NewGuid() + ".tmp");
+            string outputPath = inputPath.ExDirectoryName().ExCombine(Guid.NewGuid() + ".tmp");
             using (FileStream output = new FileStream(outputPath, FileMode.Create))
             {
                 using (FileStream input = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
@@ -138,13 +138,13 @@ namespace ZENC.CORE.Cryptography
                     DecryptFile(input, output, pwd);
                 }
             }
-            inputPath.EzFileDelete();
+            inputPath.ExFileDelete();
             File.Move(outputPath, inputPath);
         }
 
         public void EncryptFile(string inputPath, string pwd = CrypEnvironment.DEFAULTPASSWORD)
         {
-            string outputPath = inputPath.EzDirectoryName().EzCombine(Guid.NewGuid() + ".tmp");
+            string outputPath = inputPath.ExDirectoryName().ExCombine(Guid.NewGuid() + ".tmp");
             using (FileStream output = new FileStream(outputPath, FileMode.Create))
             {
                 using (FileStream input = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
@@ -153,7 +153,7 @@ namespace ZENC.CORE.Cryptography
                     EncryptFile(input, output, pwd);
                 }
             }
-            inputPath.EzFileDelete();
+            inputPath.ExFileDelete();
             File.Move(outputPath, inputPath);
         }
         #endregion
