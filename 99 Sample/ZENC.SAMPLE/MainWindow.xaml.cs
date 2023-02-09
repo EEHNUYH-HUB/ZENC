@@ -33,6 +33,9 @@ using System.ComponentModel;
 using ZENC.AZURE.Storage.Blobs;
 using System.Windows.Interop;
 using ZENC.AZURE.Resources;
+using System.Security.Cryptography;
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
+using Microsoft.Identity.Client;
 
 namespace ZENC.SAMPLE
 {
@@ -131,10 +134,24 @@ namespace ZENC.SAMPLE
                 (new Uri(blobUri), sharedKeyCredential);
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private async void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Class1 a = new Class1();
-            a.Test();
+            string clientId = "74a7177a-327b-43de-b8e9-713df68777da";
+            string tenantId = "785087ba-1e72-4e7d-b1d1-4a9639137a66";
+            string[] scopes = { "user.read" };
+
+            var app = PublicClientApplicationBuilder.Create(clientId)
+                    .WithRedirectUri("https://login.microsoftonline.com/common/oauth2/nativeclient")
+                    .WithAuthority(AzureCloudInstance.AzurePublic, tenantId)
+                    .Build();
+            
+
+            var result = await app.AcquireTokenInteractive(scopes).ExecuteAsync();
+            string s = result.AccessToken;
+
+
+            //ZENC.AZURE.Auth.OAuth2AzureAD a = new AZURE.Auth.OAuth2AzureAD();
+            //a.GenerateKey(null);
 
         }
 
@@ -142,6 +159,7 @@ namespace ZENC.SAMPLE
         {
 
         }
+       
     }
 }
 

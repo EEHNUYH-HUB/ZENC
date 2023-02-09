@@ -278,6 +278,25 @@ const menuJsonList =
         ,path:"azapi"
         ,desc: "Azure API Sample를 설정하는 그룹"
         ,component: () => import("@/zenc/layout/LY0001.vue")
+        ,children:[
+            {
+                id:"3-1"
+                ,name:"Azure Authorization"
+                ,path:"azauth"       
+                ,desc: "Azure 인증 정보 관련"         
+                ,children:[
+                    {
+                        id:"3-1-1"
+                        ,name:"OAuth2"
+                        ,path:"azoauth"
+                        ,desc: "Azure OAuth2 인증"         
+                        ,component : () => import("@/views/A0001.vue")                      
+                                   
+                    }      
+                ]                
+                           
+            }
+        ]
     }
 
 ]

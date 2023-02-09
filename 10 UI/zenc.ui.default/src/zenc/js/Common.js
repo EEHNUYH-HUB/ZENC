@@ -86,8 +86,6 @@ export function ConvertYYYYMMDDToStringDate(yyyymmdd){
     var d = parseInt(yyyymmdd.substring(6,8));
     return  y+'년 '+ m+'월 '+ d+'일';
 }
-
-
 export function DownloadLink(staticID){
     var rtn = process.env.VUE_APP_API_URL + '/api/File/Download?staticid='+ staticID;
 

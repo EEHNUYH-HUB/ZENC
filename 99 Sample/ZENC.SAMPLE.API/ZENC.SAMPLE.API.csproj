@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\00 Core\ZENC.AZURE\ZENC.AZURE.csproj" />
     <ProjectReference Include="..\..\00 Core\ZENC.CORE\ZENC.CORE\ZENC.CORE.csproj" />
     <ProjectReference Include="..\..\00 Core\ZENC\ZENC.csproj" />
     <ProjectReference Include="..\ZENC.SAMPLE.BIZ\ZENC.SAMPLE.BIZ.csproj" />

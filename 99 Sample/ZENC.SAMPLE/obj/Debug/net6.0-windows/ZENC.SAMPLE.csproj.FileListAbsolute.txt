@@ -139,3 +139,4 @@ D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE\obj\Debug\net6.0-windows\ref\ZENC.SAMPLE
 D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE\bin\Debug\net6.0-windows\Azure.Identity.dll
 D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
 D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
