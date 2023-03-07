@@ -36,6 +36,7 @@ using ZENC.AZURE.Resources;
 using System.Security.Cryptography;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Microsoft.Identity.Client;
+using Microsoft.VisualBasic.FileIO;
 
 namespace ZENC.SAMPLE
 {
@@ -157,9 +158,74 @@ namespace ZENC.SAMPLE
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            //var reader = new StreamReader(@"C:\\Users\\hhlee\\AppData\\Roaming\\USAGEDTL\\88649182\\20230301-20230331\\88649182_621726d5-16ef-4f88-9f2b-1e3ce425a645.csv");
+            //var csv = new CsvReader(reader,System.Globalization.CultureInfo.CurrentCulture);
 
+
+            string coloumn1;
+            string coloumn2;
+
+            //C:\Users\hhlee\AppData\Roaming\USAGEDTL/88649182/20230301-20230331/88649182_621726d5-16ef-4f88-9f2b-1e3ce425a645.csv
+            var path = @"C:\\Users\\hhlee\\AppData\\Roaming\\USAGEDTL\\88649182\\20230301-20230331\\88649182_621726d5-16ef-4f88-9f2b-1e3ce425a645.csv";
+            using (TextFieldParser csvReader = new TextFieldParser(path))
+            {
+                csvReader.CommentTokens = new string[] { "#" };
+                csvReader.SetDelimiters(new string[] { "," });
+                csvReader.HasFieldsEnclosedInQuotes = true;
+
+                
+
+                while (!csvReader.EndOfData)
+                {
+                    // Read current line fields, pointer moves to the next line.
+                    string[] fields = csvReader.ReadFields();
+                    coloumn1 = fields[0];
+                    coloumn2 = fields[1];
+                }
+
+            }
+
+            string t = "STIS,STIS,jspark@stis.co.kr,5e17863a-6160-4e49-a091-62279a5ab5c2,Microsoft Azure 엔터프라이즈,03-Networks,All Regions,03/05/2023,Azure Front Door Service - Standard Default Ruleset,Azure Front Door Service,,624658fc-567a-41bb-bc91-faea35599c36,Standard Default Ruleset,,1/Month,0.001344086021505,22476.793388429691,30.210743801652892,EC-YK,Microsoft.Network,/subscriptions/5e17863a-6160-4e49-a091-62279a5ab5c2/resourceGroups/03-Networks/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/oneulpluswafpolicy,,MS-AZR-0017P,\"{  \"\"Provider\"\": \"\"3\"\",  \"\"ConsumptionBeginTime\"\": \"\"2023-03-05T00:00:00Z\"\",  \"\"ConsumptionEndTime\"\": \"\"2023-03-05T00:59:00Z\"\"}\",,,oneulpluswafpolicy,,,22498,,,,Azure,,Usage,UsageBased,OnDemand,,61180007,\"Syntek Information Systems Co.,Ltd.\",KRW,03/01/2023,03/31/2023,61180007,\"Syntek Information Systems Co.,Ltd.\",,True,AAD-56826,22498.0,,Compute,,,";
+
+            List<string> strs = Utils.GetSplitUsingCSV(t);
         }
        
+    }
+
+
+    public class Utils
+    {
+        public static List<string> GetSplitUsingCSV(string str)
+        {
+            int len = str.IndexOf(",\"");
+            int len2 = str.IndexOf("\"{");
+
+            if (len > -1)
+            {
+                List<string> strs = new List<string>();
+
+                string str1 = str.Substring(0, len);
+                strs.AddRange(str1.Split(new string[] { "," }, StringSplitOptions.TrimEntries).ToList());
+                len += 1;
+                string str2 = str.Substring(len, str.Length - len);
+
+                len = str2.IndexOf("\",");
+                len += 1;
+                string str3 = str2.Substring(0, len);
+
+                strs.Add(str3);
+                len += 1;
+                string str4 = str2.Substring(len, str2.Length - len);
+                strs.AddRange(GetSplitUsingCSV(str4));
+
+                return strs;
+            }
+            else
+            {
+                return str.Split(new string[] { "," }, StringSplitOptions.TrimEntries).ToList();
+            }
+        }
+
     }
 }
 

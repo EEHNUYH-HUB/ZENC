@@ -140,3 +140,4 @@ D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE\bin\Debug\net6.0-windows\Azure.Identity.
 D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
 D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
 D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+D:\00 SOURCE\ZENC\99 Sample\ZENC.SAMPLE\bin\Debug\net6.0-windows\CsvHelper.dll
